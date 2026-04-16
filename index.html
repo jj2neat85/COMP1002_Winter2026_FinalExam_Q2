@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- head containing meta tags and stylesheets -->
+    <head>
+
+        <!-- viewport settings -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Page title for browser tab -->
+        <title>Tech Workshop Registration</title>
+        
+        <!-- Main stylesheet with all page styling -->
+        <link rel="stylesheet" href="./styles/style.css"> 
+
+        <!-- Google Fonts for Playwrite, Roboto Mono, and Changa One -->
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Changa+One:ital@0;1&display=swap" rel="stylesheet">
+        
+    </head>
+
+    <body>
+
+        <!-- Main page wrapper that holds all page content -->
+        <main class="page-wrapper">
+            
+            <!-- Header section -->
+            <header class="header-container">
+                <h1 class="page-title">Tech Workshop Registration</h1>
+            </header>
+
+            <!-- Container that holds the primary content sections of the page -->
+            <section class="main-content-container">
+
+                <!-- Form section -->
+                <article class="form-container">
+
+                    <!-- Form title -->
+                    <h2 class="form-title">Register Now</h2>
+
+                    <!-- Registration form, id for JavaScript -->
+                    <form id="registrationForm" class="registration-form">
+
+                        <!-- Name field with label -->
+                        <fieldset class="form-group">
+
+                            <label for="nameInput" class="form-label">Full Name</label>
+                            <input 
+                                type="text" 
+                                id="nameInput" 
+                                name="name" 
+                                class="form-input" 
+                                placeholder="Enter your full name"
+                                required
+                            >
+
+                        </fieldset>
+
+                        <!-- Email field with label -->
+                        <fieldset class="form-group">
+
+                            <label for="emailInput" class="form-label">Email Address</label>
+                            <input 
+                                type="email" 
+                                id="emailInput" 
+                                name="email" 
+                                class="form-input" 
+                                placeholder="Enter your email address"
+                                required
+                            >
+
+                        </fieldset>
+
+                        <!-- Skill level dropdown with label -->
+                        <fieldset class="form-group">
+
+                            <label for="skillLevelSelect" class="form-label">Skill Level</label>
+                            <select 
+                                id="skillLevelSelect" 
+                                name="skillLevel" 
+                                class="form-input"
+                                required
+                            >
+                            
+                                <!-- Skill level options-->
+                                <option value="" disabled selected>-- Select a skill level --</option>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+
+                            </select>
+
+                        </fieldset>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="submit-btn">Register</button>
+
+                    </form>
+
+                </article>
+
+                <!-- Message section -->
+                <article class="message-container">
+
+                    <section id="messageBox" class="message-box hidden">
+                        <p id="messageText" class="message-text"></p>
+                    </section>
+
+                </article>
+
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>All rights reserved.</p>
+            </footer>
+
+        </main>
+
+        <script src="./scripts/script.js"></script>
+
+    </body>
+</html>

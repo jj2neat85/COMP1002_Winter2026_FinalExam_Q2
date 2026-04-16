@@ -1,0 +1,237 @@
+/* Some CSS I just put together quickly from the first part, modified again. */
+
+/* Main thing I added was the 'hidden' class for the message box and the fieldset styling */
+
+:root {
+    /* Color Palette */
+    --text:               #000000;
+    --background:         rgba(240, 240, 240, 0.8);
+    --primary:            rgb(38, 105, 199);
+    --success:            rgb(52, 168, 96);
+    --border:             rgb(85, 85, 85);
+
+    /* Gradient Background Colors */
+    --bg1: rgba(255, 255, 155, 0.8);
+    --bg2: rgba(100, 220, 210, 0.8);
+
+    /* Fonts */
+    --font-header:        "Inter", system-ui, sans-serif;
+    --font-mono:          "Roboto Mono", monospace;
+
+    /* Spacing Scale */
+    --space-sm:           0.5rem;
+    --space-md:           1rem;
+    --space-lg:           1.5rem;
+    --space-xl:           2rem;
+    --space-2xl:          3rem;
+
+    /* Border Radius Scale */
+    --radius-md:          0.5rem;
+    --radius-lg:          1rem;
+}
+
+
+/* Base styles and resets */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-mono);
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+
+/* Layout */
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header-container {
+    text-align: center;
+    padding: var(--space-md) var(--space-lg);
+    background: linear-gradient(135deg, var(--bg2) 0%, var(--bg1) 100%);
+    border-bottom: 2px solid var(--border);
+}
+
+.page-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: var(--space-md);
+    font-family: var(--font-header);
+}
+
+.main-content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-2xl) var(--space-lg);
+    gap: var(--space-2xl);
+}
+
+
+/* Form Styling */
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--space-2xl);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: var(--space-xl);
+    text-align: center;
+    font-family: var(--font-header);
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 0.95rem;
+}
+
+.form-input {
+    padding: var(--space-md);
+    border: 2px solid var(--border);
+    border-radius: var(--radius-md);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 8px rgba(38, 105, 199, 0.3);
+}
+
+
+/* submit button styling */
+.submit-btn {
+    padding: var(--space-md) var(--space-lg);
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: var(--space-md);
+}
+
+.submit-btn:hover {
+    background-color: rgba(38, 105, 199, 0.9);
+    box-shadow: 0 6px 16px rgba(38, 105, 199, 0.3);
+}
+
+
+
+/* Message Container */
+
+.message-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.message-box {
+    background-color: rgba(52, 168, 96, 0.1);
+    border: 2px solid var(--success);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+.message-box.hidden {
+    display: none;
+}
+
+.message-text {
+    font-size: 1.1rem;
+    color: var(--success);
+    font-weight: 600;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: var(--space-lg);
+    background-color: rgba(107, 107, 107, 0.1);
+    border-top: 2px solid var(--border);
+    color: var(--text);
+    opacity: 0.7;
+}
+
+
+.main-content-container > .content-description {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: var(--space-xl);
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    text-align: left;
+}
+
+.content-description {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-size: 1.25rem;
+}
+
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: var(--space-md);
+    background-color: var(--nav-bg);
+    border-top: 0.25rem solid var(--nav-border);
+    color: var(--text);
+}
+
+/* Utility classes */
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
